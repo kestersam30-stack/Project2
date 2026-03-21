@@ -53,11 +53,11 @@ resource "aws_security_group" "sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # Open to all; consider using your specific IP
+    cidr_blocks = ["0.0.0.0/0"] 
   }
 
   ingress {
-    from_port   = 8080 # Jenkins default port is usually 8080, not 3000
+    from_port   = 8080 
     to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]

@@ -22,15 +22,13 @@ resource "aws_subnet" "subnet" {
   vpc_id                  = aws_vpc.main.id
   cidr_block              = "10.0.1.0/24"
   availability_zone       = "ap-south-1a"
-  # FIX: This ensures your instance gets a Public IP address
-  map_public_ip_on_launch = true 
+    map_public_ip_on_launch = true 
 }
 
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
 }
 
-# FIX: You need a Route Table to tell the VPC to send traffic to the Internet Gateway
 resource "aws_route_table" "rt" {
   vpc_id = aws_vpc.main.id
 

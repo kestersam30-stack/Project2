@@ -192,7 +192,25 @@ Verify IAM permissions for automated deployments
 Without aws-auth ConfigMap mapping nodes won’t join cluster.
 
 Promethus & Grafana setup
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm install monitoring prometheus-community/kube-prometheus-stack
+Install Promethus & Grafana in instance
 in Grafana update data source with Prometheus server URL & verify in Prometheus
 View monitoring via Grafana dashboard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
